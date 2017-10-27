@@ -14,4 +14,6 @@ var EmailSettingsDirectClientV1_1 = require("./EmailSettingsDirectClientV1");
 exports.EmailSettingsDirectClientV1 = EmailSettingsDirectClientV1_1.EmailSettingsDirectClientV1;
 var EmailSettingsNullClientV1_1 = require("./EmailSettingsNullClientV1");
 exports.EmailSettingsNullClientV1 = EmailSettingsNullClientV1_1.EmailSettingsNullClientV1;
+var EmailSettingsMemoryClientV1_1 = require("./EmailSettingsMemoryClientV1");
+exports.EmailSettingsMemoryClientV1 = EmailSettingsMemoryClientV1_1.EmailSettingsMemoryClientV1;
 //# sourceMappingURL=index.js.map

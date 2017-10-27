@@ -96,7 +96,7 @@ export class EmailSettingsClientFixtureV1 {
                     (err, settings) => {
                         assert.isNull(err);
                         
-                        assert.isNull(settings);
+                        assert.isNull(settings || null);
 
                         callback();
                     }

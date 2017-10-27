@@ -6,3 +6,4 @@ export { EmailSettingsSenecaClientV1 } from './EmailSettingsSenecaClientV1';
 export { EmailSettingsLambdaClientV1 } from './EmailSettingsLambdaClientV1';
 export { EmailSettingsDirectClientV1 } from './EmailSettingsDirectClientV1';
 export { EmailSettingsNullClientV1 } from './EmailSettingsNullClientV1';
+export { EmailSettingsMemoryClientV1 } from './EmailSettingsMemoryClientV1';
