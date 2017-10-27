@@ -1,0 +1,24 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const pip_services_commons_node_1 = require("pip-services-commons-node");
+const pip_services_commons_node_2 = require("pip-services-commons-node");
+const EmailSettingsNullClientV1_1 = require("../version1/EmailSettingsNullClientV1");
+const EmailSettingsDirectClientV1_1 = require("../version1/EmailSettingsDirectClientV1");
+const EmailSettingsHttpClientV1_1 = require("../version1/EmailSettingsHttpClientV1");
+const EmailSettingsSenecaClientV1_1 = require("../version1/EmailSettingsSenecaClientV1");
+class EmailSettingsClientFactory extends pip_services_commons_node_2.Factory {
+    constructor() {
+        super();
+        this.registerAsType(EmailSettingsClientFactory.NullClientV1Descriptor, EmailSettingsNullClientV1_1.EmailSettingsNullClientV1);
+        this.registerAsType(EmailSettingsClientFactory.DirectClientV1Descriptor, EmailSettingsDirectClientV1_1.EmailSettingsDirectClientV1);
+        this.registerAsType(EmailSettingsClientFactory.HttpClientV1Descriptor, EmailSettingsHttpClientV1_1.EmailSettingsHttpClientV1);
+        this.registerAsType(EmailSettingsClientFactory.SenecaClientV1Descriptor, EmailSettingsSenecaClientV1_1.EmailSettingsSenecaClientV1);
+    }
+}
+EmailSettingsClientFactory.Descriptor = new pip_services_commons_node_1.Descriptor('pip-services-emailsettings', 'factory', 'default', 'default', '1.0');
+EmailSettingsClientFactory.NullClientV1Descriptor = new pip_services_commons_node_1.Descriptor('pip-services-emailsettings', 'client', 'null', 'default', '1.0');
+EmailSettingsClientFactory.DirectClientV1Descriptor = new pip_services_commons_node_1.Descriptor('pip-services-emailsettings', 'client', 'direct', 'default', '1.0');
+EmailSettingsClientFactory.HttpClientV1Descriptor = new pip_services_commons_node_1.Descriptor('pip-services-emailsettings', 'client', 'http', 'default', '1.0');
+EmailSettingsClientFactory.SenecaClientV1Descriptor = new pip_services_commons_node_1.Descriptor('pip-services-emailsettings', 'client', 'seneca', 'default', '1.0');
+exports.EmailSettingsClientFactory = EmailSettingsClientFactory;
+//# sourceMappingURL=EmailSettingsClientFactory.js.map
