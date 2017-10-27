@@ -7,7 +7,7 @@ export class EmailSettingsV1 implements IStringIdentifiable {
     public email: string;
     public language?: string;
 
-    /* EmailSettings management */
+    /* Email management */
     public subscriptions?: any;
     public verified?: boolean;
     public ver_code?: string;
