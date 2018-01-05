@@ -30,6 +30,11 @@ class EmailSettingsHttpClientV1 extends pip_services_net_node_1.CommandableHttpC
             settings: settings
         }, callback);
     }
+    setVerifiedSettings(correlationId, settings, callback) {
+        this.callCommand('set_verified_settings', correlationId, {
+            settings: settings
+        }, callback);
+    }
     setRecipient(correlationId, recipientId, name, email, language, callback) {
         this.callCommand('set_recipient', correlationId, {
             recipient_id: recipientId,

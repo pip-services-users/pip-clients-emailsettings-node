@@ -14,6 +14,10 @@ class EmailSettingsNullClientV1 {
         if (callback)
             callback(null, settings);
     }
+    setVerifiedSettings(correlationId, settings, callback) {
+        if (callback)
+            callback(null, settings);
+    }
     setRecipient(correlationId, recipientId, name, email, language, callback) {
         if (callback) {
             callback(null, {

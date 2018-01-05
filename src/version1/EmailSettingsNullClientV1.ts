@@ -28,6 +28,11 @@ export class EmailSettingsNullClientV1 implements IEmailSettingsClientV1 {
         if (callback) callback(null, settings);
     }
 
+    public setVerifiedSettings(correlationId: string, settings: EmailSettingsV1,
+        callback?: (err: any, settings: EmailSettingsV1) => void): void {
+        if (callback) callback(null, settings);
+    }
+
     public setRecipient(correlationId: string, recipientId: string,
         name: string, email: string, language: string,
         callback?: (err: any, settings: EmailSettingsV1) => void): void {

@@ -67,6 +67,18 @@ export class EmailSettingsLambdaClientV1 extends CommandableLambdaClient impleme
         );
     }
 
+    public setVerifiedSettings(correlationId: string, settings: EmailSettingsV1,
+        callback?: (err: any, settings: EmailSettingsV1) => void): void {
+        this.callCommand(
+            'set_verified_settings',
+            correlationId,
+            {
+                settings: settings
+            },
+            callback
+        );
+    }
+
     public setRecipient(correlationId: string, recipientId: string,
         name: string, email: string, language: string,
         callback?: (err: any, settings: EmailSettingsV1) => void): void {

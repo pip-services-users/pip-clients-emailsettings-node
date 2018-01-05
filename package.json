@@ -54,7 +54,7 @@
         "matcha": "*",
         "mocha": "*",
         "aws-sdk": "*",
-        "pip-clients-emaildelivery-node": "git+ssh://git@github.com:pip-services-infrastructure/pip-clients-emaildelivery-node.git",
+        "pip-clients-email-node": "git+ssh://git@github.com:pip-services-infrastructure/pip-clients-email-node.git",
         "pip-services-emailsettings-node": "git+ssh://git@github.com:pip-services-users/pip-services-emailsettings-node.git"
     }
 }

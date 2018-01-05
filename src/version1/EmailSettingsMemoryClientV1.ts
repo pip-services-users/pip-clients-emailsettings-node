@@ -40,6 +40,17 @@ export class EmailSettingsMemoryClientV1 implements IEmailSettingsClientV1 {
         if (callback) callback(null, settings);
     }
 
+    public setVerifiedSettings(correlationId: string, settings: EmailSettingsV1,
+        callback?: (err: any, settings: EmailSettingsV1) => void): void {
+
+        settings.verified = true;
+        settings.subscriptions = settings.subscriptions || {};
+
+        this._settings = _.filter(this._settings, s => s.id != settings.id);
+        this._settings.push(settings);
+        if (callback) callback(null, settings);
+    }
+
     public setRecipient(correlationId: string, recipientId: string,
         name: string, email: string, language: string,
         callback?: (err: any, settings: EmailSettingsV1) => void): void {

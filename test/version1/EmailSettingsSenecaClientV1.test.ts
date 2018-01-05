@@ -7,7 +7,7 @@ import { References } from 'pip-services-commons-node';
 import { ConsoleLogger } from 'pip-services-commons-node';
 import { SenecaInstance } from 'pip-services-net-node';
 
-import { EmailDeliveryNullClientV1 } from 'pip-clients-emaildelivery-node';
+import { EmailNullClientV1 } from 'pip-clients-email-node';
 import { EmailSettingsMemoryPersistence } from 'pip-services-emailsettings-node';
 import { EmailSettingsController } from 'pip-services-emailsettings-node';
 import { EmailSettingsSenecaServiceV1 } from 'pip-services-emailsettings-node';
@@ -40,7 +40,7 @@ suite('EmailSettingsSenecaClient', () => {
             new Descriptor('pip-services-emailsettings', 'persistence', 'memory', 'default', '1.0'), persistence,
             new Descriptor('pip-services-emailsettings', 'controller', 'default', 'default', '1.0'), controller,
             new Descriptor('pip-services-emailsettings', 'service', 'seneca', 'default', '1.0'), service,
-            new Descriptor('pip-services-emaildelivery', 'client', 'null', 'default', '1.0'), new EmailDeliveryNullClientV1()
+            new Descriptor('pip-services-emaildelivery', 'client', 'null', 'default', '1.0'), new EmailNullClientV1()
         );
         seneca.setReferences(references);
         controller.setReferences(references);

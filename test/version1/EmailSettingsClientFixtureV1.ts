@@ -36,6 +36,7 @@ export class EmailSettingsClientFixtureV1 {
                         assert.isObject(settings);
                         assert.equal(settings.id, SETTINGS.id);
                         assert.equal(settings.email, SETTINGS.email);
+                        assert.isFalse(settings.verified);
 
                         settings1 = settings;
 
@@ -43,7 +44,26 @@ export class EmailSettingsClientFixtureV1 {
                     }
                 );
             },
-        // Update the email settings
+        // Update verified email settings
+        (callback) => {
+            this._client.setVerifiedSettings(
+                null,
+                settings1,
+                (err, settings) => {
+                    assert.isNull(err);
+                    
+                    assert.isObject(settings);
+                    assert.equal(settings.id, SETTINGS.id);
+                    assert.equal(settings.email, SETTINGS.email);
+                    assert.isTrue(settings.verified);
+
+                    settings1 = settings;
+
+                    callback();
+                }
+            );
+        },
+    // Update the email settings
             (callback) => {
                 settings1.subscriptions.engagement = true;
 
