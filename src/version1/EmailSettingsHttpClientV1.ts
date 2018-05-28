@@ -12,7 +12,7 @@ export class EmailSettingsHttpClientV1 extends CommandableHttpClient implements 
     private _defaultParameters: ConfigParams;
 
     constructor(config?: any) {
-        super('email_settings');
+        super('v1/email_settings');
 
         let thisConfig = ConfigParams.fromValue(config);
         this._defaultParameters = thisConfig.getSection('parameters');
