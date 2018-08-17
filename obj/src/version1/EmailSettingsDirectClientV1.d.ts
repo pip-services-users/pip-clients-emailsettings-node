@@ -1,4 +1,4 @@
-import { DirectClient } from 'pip-services-net-node';
+import { DirectClient } from 'pip-services-rpc-node';
 import { IEmailSettingsClientV1 } from './IEmailSettingsClientV1';
 import { EmailSettingsV1 } from './EmailSettingsV1';
 export declare class EmailSettingsDirectClientV1 extends DirectClient<any> implements IEmailSettingsClientV1 {

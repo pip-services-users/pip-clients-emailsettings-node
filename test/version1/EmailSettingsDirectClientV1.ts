@@ -4,7 +4,7 @@ let async = require('async');
 import { Descriptor } from 'pip-services-commons-node';
 import { ConfigParams } from 'pip-services-commons-node';
 import { References } from 'pip-services-commons-node';
-import { ConsoleLogger } from 'pip-services-commons-node';
+import { ConsoleLogger } from 'pip-services-components-node';
 
 import { EmailNullClientV1 } from 'pip-clients-email-node';
 import { EmailSettingsMemoryPersistence } from 'pip-services-emailsettings-node';
@@ -24,7 +24,7 @@ suite('EmailSettingsDirectClientV1', ()=> {
         controller.configure(new ConfigParams());
 
         let references: References = References.fromTuples(
-            new Descriptor('pip-services-commons', 'logger', 'console', 'default', '1.0'), logger,
+            new Descriptor('pip-services', 'logger', 'console', 'default', '1.0'), logger,
             new Descriptor('pip-services-emailsettings', 'persistence', 'memory', 'default', '1.0'), persistence,
             new Descriptor('pip-services-emailsettings', 'controller', 'default', 'default', '1.0'), controller,
             new Descriptor('pip-services-emaildelivery', 'client', 'null', 'default', '1.0'), new EmailNullClientV1()

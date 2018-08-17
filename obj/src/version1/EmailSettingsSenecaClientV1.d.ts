@@ -1,4 +1,4 @@
-import { CommandableSenecaClient } from 'pip-services-net-node';
+import { CommandableSenecaClient } from 'pip-services-seneca-node';
 import { EmailSettingsV1 } from './EmailSettingsV1';
 import { IEmailSettingsClientV1 } from './IEmailSettingsClientV1';
 export declare class EmailSettingsSenecaClientV1 extends CommandableSenecaClient implements IEmailSettingsClientV1 {

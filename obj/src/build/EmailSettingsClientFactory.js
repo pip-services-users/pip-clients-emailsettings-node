@@ -1,13 +1,13 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const pip_services_commons_node_1 = require("pip-services-commons-node");
-const pip_services_commons_node_2 = require("pip-services-commons-node");
+const pip_services_components_node_1 = require("pip-services-components-node");
 const EmailSettingsNullClientV1_1 = require("../version1/EmailSettingsNullClientV1");
 const EmailSettingsMemoryClientV1_1 = require("../version1/EmailSettingsMemoryClientV1");
 const EmailSettingsDirectClientV1_1 = require("../version1/EmailSettingsDirectClientV1");
 const EmailSettingsHttpClientV1_1 = require("../version1/EmailSettingsHttpClientV1");
 const EmailSettingsSenecaClientV1_1 = require("../version1/EmailSettingsSenecaClientV1");
-class EmailSettingsClientFactory extends pip_services_commons_node_2.Factory {
+class EmailSettingsClientFactory extends pip_services_components_node_1.Factory {
     constructor() {
         super();
         this.registerAsType(EmailSettingsClientFactory.NullClientV1Descriptor, EmailSettingsNullClientV1_1.EmailSettingsNullClientV1);
