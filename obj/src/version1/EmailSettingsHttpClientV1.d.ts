@@ -1,4 +1,4 @@
-import { CommandableHttpClient } from 'pip-services-rpc-node';
+import { CommandableHttpClient } from 'pip-services3-rpc-node';
 import { EmailSettingsV1 } from './EmailSettingsV1';
 import { IEmailSettingsClientV1 } from './IEmailSettingsClientV1';
 export declare class EmailSettingsHttpClientV1 extends CommandableHttpClient implements IEmailSettingsClientV1 {

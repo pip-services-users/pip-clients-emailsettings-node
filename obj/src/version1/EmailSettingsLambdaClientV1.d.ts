@@ -1,4 +1,4 @@
-import { CommandableLambdaClient } from 'pip-services-aws-node';
+import { CommandableLambdaClient } from 'pip-services3-aws-node';
 import { EmailSettingsV1 } from './EmailSettingsV1';
 import { IEmailSettingsClientV1 } from './IEmailSettingsClientV1';
 export declare class EmailSettingsLambdaClientV1 extends CommandableLambdaClient implements IEmailSettingsClientV1 {

@@ -1,7 +1,7 @@
-import { ConfigParams } from 'pip-services-commons-node';
-import { FilterParams } from 'pip-services-commons-node';
-import { PagingParams} from 'pip-services-commons-node';
-import { DataPage } from 'pip-services-commons-node';
+import { ConfigParams } from 'pip-services3-commons-node';
+import { FilterParams } from 'pip-services3-commons-node';
+import { PagingParams} from 'pip-services3-commons-node';
+import { DataPage } from 'pip-services3-commons-node';
 
 import { IEmailSettingsClientV1 } from './IEmailSettingsClientV1';
 import { EmailSettingsV1 } from './EmailSettingsV1';
