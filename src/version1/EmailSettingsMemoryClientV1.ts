@@ -23,7 +23,7 @@ export class EmailSettingsMemoryClientV1 implements IEmailSettingsClientV1 {
         callback(null, settings);
     }
 
-    public getSettingsByEmailSettings(correlationId: string, email: string,
+    public getSettingsByEmail(correlationId: string, email: string,
         callback: (err: any, settings: EmailSettingsV1) => void): void {
         let settings = _.find(this._settings, s => s.email == email);
         callback(null, settings);

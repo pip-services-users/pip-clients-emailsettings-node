@@ -6,5 +6,8 @@ export declare class EmailSettingsClientFactory extends Factory {
     static MemoryClientV1Descriptor: Descriptor;
     static DirectClientV1Descriptor: Descriptor;
     static HttpClientV1Descriptor: Descriptor;
+    static LambdaClientV1Descriptor: Descriptor;
+    static CommandableGrpcClientV1Descriptor: Descriptor;
+    static GrpcClientV1Descriptor: Descriptor;
     constructor();
 }

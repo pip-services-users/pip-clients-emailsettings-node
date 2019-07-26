@@ -13,7 +13,7 @@ class EmailSettingsMemoryClientV1 {
         let settings = _.find(this._settings, s => s.id == recipientId);
         callback(null, settings);
     }
-    getSettingsByEmailSettings(correlationId, email, callback) {
+    getSettingsByEmail(correlationId, email, callback) {
         let settings = _.find(this._settings, s => s.email == email);
         callback(null, settings);
     }

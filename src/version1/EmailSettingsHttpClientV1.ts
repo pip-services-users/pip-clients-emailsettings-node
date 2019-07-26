@@ -43,7 +43,7 @@ export class EmailSettingsHttpClientV1 extends CommandableHttpClient implements 
         );
     }
 
-    public getSettingsByEmailSettings(correlationId: string, email: string,
+    public getSettingsByEmail(correlationId: string, email: string,
         callback: (err: any, settings: EmailSettingsV1) => void): void {
         this.callCommand(
             'get_settings_by_email',

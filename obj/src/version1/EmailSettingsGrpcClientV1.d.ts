@@ -1,7 +1,7 @@
-import { CommandableLambdaClient } from 'pip-services3-aws-node';
-import { EmailSettingsV1 } from './EmailSettingsV1';
+import { GrpcClient } from 'pip-services3-grpc-node';
 import { IEmailSettingsClientV1 } from './IEmailSettingsClientV1';
-export declare class EmailSettingsLambdaClientV1 extends CommandableLambdaClient implements IEmailSettingsClientV1 {
+import { EmailSettingsV1 } from './EmailSettingsV1';
+export declare class EmailSettingsGrpcClientV1 extends GrpcClient implements IEmailSettingsClientV1 {
     private _defaultParameters;
     constructor(config?: any);
     getSettingsByIds(correlationId: string, recipientIds: string[], callback: (err: any, settings: EmailSettingsV1[]) => void): void;

@@ -39,7 +39,7 @@ suite('EmailSettingsHttpClientV1', ()=> {
             new Descriptor('pip-services-emailsettings', 'persistence', 'memory', 'default', '1.0'), persistence,
             new Descriptor('pip-services-emailsettings', 'controller', 'default', 'default', '1.0'), controller,
             new Descriptor('pip-services-emailsettings', 'service', 'http', 'default', '1.0'), service,
-            new Descriptor('pip-services-emaildelivery', 'client', 'null', 'default', '1.0'), new EmailNullClientV1()
+            new Descriptor('pip-services-email', 'client', 'null', 'default', '1.0'), new EmailNullClientV1()
         );
         controller.setReferences(references);
         service.setReferences(references);

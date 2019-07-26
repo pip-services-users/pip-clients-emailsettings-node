@@ -20,7 +20,7 @@ class EmailSettingsHttpClientV1 extends pip_services3_rpc_node_1.CommandableHttp
             recipient_id: recipientId
         }, callback);
     }
-    getSettingsByEmailSettings(correlationId, email, callback) {
+    getSettingsByEmail(correlationId, email, callback) {
         this.callCommand('get_settings_by_email', correlationId, {
             email: email
         }, callback);

@@ -9,7 +9,7 @@ and provides high-level API to access the microservice for simple and productive
 * [EmailSettingsV1 class](#class1)
 * [IEmailSettingsClientV1 interface](#interface)
     - [getSettingsById()](#operation1)
-    - [getSettingsByEmailSettings()](#operation2)
+    - [getSettingsByEmail()](#operation2)
     - [setSettings()](#operation3)
     - [setRecipient()](#operation4)
     - [setSuscriptions()](#operation5)
@@ -120,7 +120,7 @@ all methods defined in this interface are implemented by all client classes.
 ```javascript
 interface IEmailSettingsClientV1 {
     getSettingsById(correlationId, recipientId, callback);
-    getSettingsByEmailSettings(correlationId, email, callback);
+    getSettingsByEmail(correlationId, email, callback);
     setSettings(correlationId, settings, callback);
     setRecipient(correlationId, recipientId, name, email, language, callback);
     setSubscriptions(correlationId, recipientId, subscriptions, callback);
@@ -141,7 +141,7 @@ Retrieves email settings by recipient unique id.
   - err: Error - occured error or null for success
   - settings: EmailSettings - retrieved EmailSettings object
 
-### <a name="operation2"></a> getSettingsByEmailSettings(correlationId, email, callback)
+### <a name="operation2"></a> getSettingsByEmail(correlationId, email, callback)
 
 Retrieves email settings by recipient email. 
 
@@ -234,7 +234,7 @@ class EmailSettingsHttpClientV1 extends CommandableHttpClient implements IEmailS
     open(correlationId, callback);
     close(correlationId, callback);
     getSettingsById(correlationId, recipientId, callback);
-    getSettingsByEmailSettings(correlationId, email, callback);
+    getSettingsByEmail(correlationId, email, callback);
     setSettings(correlationId, settings, callback);
     setRecipient(correlationId, recipientId, name, email, language, callback);
     setSubscriptions(correlationId, recipientId, subscriptions, callback);
@@ -262,7 +262,7 @@ class EmailSettingsSenecaClientV1 extends CommandableSenecaClient implements IEm
     open(correlationId, callback);
     close(correlationId, callback);
     getSettingsById(correlationId, recipientId, callback);
-    getSettingsByEmailSettings(correlationId, email, callback);
+    getSettingsByEmail(correlationId, email, callback);
     setSettings(correlationId, settings, callback);
     setRecipient(correlationId, recipientId, name, email, language, callback);
     setSubscriptions(correlationId, recipientId, subscriptions, callback);
@@ -291,7 +291,7 @@ class EmailSettingsDirectClientV1 extends DirectClient implements IEmailSettings
     open(correlationId, callback);
     close(correlationId, callback);
     getSettingsById(correlationId, recipientId, callback);
-    getSettingsByEmailSettings(correlationId, email, callback);
+    getSettingsByEmail(correlationId, email, callback);
     setSettings(correlationId, settings, callback);
     setRecipient(correlationId, recipientId, name, email, language, callback);
     setSubscriptions(correlationId, recipientId, subscriptions, callback);
@@ -310,7 +310,7 @@ It can be useful in testing scenarios to cut dependencies on external microservi
 class EmailSettingsNullClientV1 implements IEmailSettingsClientV1 {
     constructor();
     getSettingsById(correlationId, recipientId, callback);
-    getSettingsByEmailSettings(correlationId, email, callback);
+    getSettingsByEmail(correlationId, email, callback);
     setSettings(correlationId, settings, callback);
     setRecipient(correlationId, recipientId, name, email, language, callback);
     setSubscriptions(correlationId, recipientId, subscriptions, callback);

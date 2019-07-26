@@ -40,10 +40,10 @@ export class EmailSettingsDirectClientV1 extends DirectClient<any> implements IE
         });
     }
 
-    public getSettingsByEmailSettings(correlationId: string, email: string,
+    public getSettingsByEmail(correlationId: string, email: string,
         callback: (err: any, settings: EmailSettingsV1) => void): void {
         let timing = this.instrument(correlationId, 'email_settings.get_settings_by_email');
-        this._controller.getSettingsByEmailSettings(correlationId, email, (err, settings) => {
+        this._controller.getSettingsByEmail(correlationId, email, (err, settings) => {
             timing.endTiming();
             callback(err, settings);
         });

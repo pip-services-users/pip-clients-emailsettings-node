@@ -7,7 +7,7 @@ class EmailSettingsNullClientV1 {
     getSettingsById(correlationId, recipientId, callback) {
         callback(null, null);
     }
-    getSettingsByEmailSettings(correlationId, email, callback) {
+    getSettingsByEmail(correlationId, email, callback) {
         callback(null, null);
     }
     setSettings(correlationId, settings, callback) {

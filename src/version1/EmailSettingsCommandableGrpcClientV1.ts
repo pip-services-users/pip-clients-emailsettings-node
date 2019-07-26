@@ -3,16 +3,16 @@ import { IReferences } from 'pip-services3-commons-node';
 import { FilterParams } from 'pip-services3-commons-node';
 import { PagingParams } from 'pip-services3-commons-node';
 import { DataPage } from 'pip-services3-commons-node';
-import { CommandableLambdaClient } from 'pip-services3-aws-node';
+import { CommandableGrpcClient } from 'pip-services3-grpc-node';
 
 import { EmailSettingsV1 } from './EmailSettingsV1';
 import { IEmailSettingsClientV1 } from './IEmailSettingsClientV1';
 
-export class EmailSettingsLambdaClientV1 extends CommandableLambdaClient implements IEmailSettingsClientV1 {
+export class EmailSettingsCommandableGrpcClientV1 extends CommandableGrpcClient implements IEmailSettingsClientV1 {
     private _defaultParameters: ConfigParams;
 
     constructor(config?: any) {
-        super('email_settings');
+        super('v1/email_settings');
 
         let thisConfig = ConfigParams.fromValue(config);
         this._defaultParameters = thisConfig.getSection('parameters');
@@ -144,5 +144,4 @@ export class EmailSettingsLambdaClientV1 extends CommandableLambdaClient impleme
             callback
         );
     }
-
 }

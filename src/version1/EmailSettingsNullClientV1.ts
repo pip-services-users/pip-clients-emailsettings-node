@@ -18,7 +18,7 @@ export class EmailSettingsNullClientV1 implements IEmailSettingsClientV1 {
         callback(null, null);
     }
 
-    public getSettingsByEmailSettings(correlationId: string, email: string,
+    public getSettingsByEmail(correlationId: string, email: string,
         callback: (err: any, settings: EmailSettingsV1) => void): void {
         callback(null, null);
     }

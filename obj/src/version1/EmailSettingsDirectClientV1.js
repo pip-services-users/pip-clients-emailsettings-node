@@ -27,9 +27,9 @@ class EmailSettingsDirectClientV1 extends pip_services3_rpc_node_1.DirectClient 
             callback(err, settings);
         });
     }
-    getSettingsByEmailSettings(correlationId, email, callback) {
+    getSettingsByEmail(correlationId, email, callback) {
         let timing = this.instrument(correlationId, 'email_settings.get_settings_by_email');
-        this._controller.getSettingsByEmailSettings(correlationId, email, (err, settings) => {
+        this._controller.getSettingsByEmail(correlationId, email, (err, settings) => {
             timing.endTiming();
             callback(err, settings);
         });
