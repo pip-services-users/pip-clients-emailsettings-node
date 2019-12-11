@@ -1,6 +1,6 @@
 {
     "name": "pip-clients-emailsettings-node",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "author": "Conceptual Vision Consulting LLC",
     "description": "Node.js client sdk for pip-services-emailsettings microservice",
     "contributors": [
@@ -56,7 +56,7 @@
         "restify": "^4.3.0",
         "chai": "*",
         "mocha": "*",
-        "pip-clients-email-node": "git+ssh://git@github.com:pip-services-infrastructure/pip-clients-email-node.git",
-        "pip-services-emailsettings-node": "git+ssh://git@github.com:pip-services-users/pip-services-emailsettings-node.git"
+        "pip-clients-email-node": "^1.0.1",
+        "pip-services-emailsettings-node": "^1.1.0"
     }
 }

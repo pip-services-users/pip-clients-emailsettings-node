@@ -21,6 +21,7 @@ class EmailSettingsClientFactory extends pip_services3_components_node_1.Factory
         this.registerAsType(EmailSettingsClientFactory.GrpcClientV1Descriptor, EmailSettingsGrpcClientV1_1.EmailSettingsGrpcClientV1);
     }
 }
+exports.EmailSettingsClientFactory = EmailSettingsClientFactory;
 EmailSettingsClientFactory.Descriptor = new pip_services3_commons_node_1.Descriptor('pip-services-emailsettings', 'factory', 'default', 'default', '1.0');
 EmailSettingsClientFactory.NullClientV1Descriptor = new pip_services3_commons_node_1.Descriptor('pip-services-emailsettings', 'client', 'null', 'default', '1.0');
 EmailSettingsClientFactory.MemoryClientV1Descriptor = new pip_services3_commons_node_1.Descriptor('pip-services-emailsettings', 'client', 'memory', 'default', '1.0');
@@ -29,5 +30,4 @@ EmailSettingsClientFactory.HttpClientV1Descriptor = new pip_services3_commons_no
 EmailSettingsClientFactory.LambdaClientV1Descriptor = new pip_services3_commons_node_1.Descriptor('pip-services-emailsettings', 'client', 'lambda', 'default', '1.0');
 EmailSettingsClientFactory.CommandableGrpcClientV1Descriptor = new pip_services3_commons_node_1.Descriptor('pip-services-emailsettings', 'client', 'commandable-grpc', 'default', '1.0');
 EmailSettingsClientFactory.GrpcClientV1Descriptor = new pip_services3_commons_node_1.Descriptor('pip-services-emailsettings', 'client', 'grpc', 'default', '1.0');
-exports.EmailSettingsClientFactory = EmailSettingsClientFactory;
 //# sourceMappingURL=EmailSettingsClientFactory.js.map
