@@ -56,7 +56,7 @@
         "restify": "^4.3.0",
         "chai": "*",
         "mocha": "*",
-        "pip-clients-email-node": "^1.0.1",
+        "pip-clients-email-node": "^1.0.3",
         "pip-services-emailsettings-node": "^1.1.0"
     }
 }
